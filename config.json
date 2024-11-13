@@ -1,0 +1,29 @@
+{
+    "config": {
+      "owner": "org-name"
+    },
+    "repos": [
+      {
+        "ServiceName": "Handler service",
+        "Repo" : "handler-service",
+        "actions": {
+          "develop": [
+            "handler-build-dev.yaml",
+            "handler-deploy.yaml"
+          ],
+          "qa": [
+            "handler-build-qa.yaml",
+            "handler-deploy.yaml"
+          ],
+          "uat": [
+            "handler-build-uat.yaml",
+            "handler-deploy.yaml"
+          ],
+          "master": [
+            "handler-build-production.yaml",
+            "handler-deploy.yaml"
+          ]
+        }
+      }
+    ]
+  }
