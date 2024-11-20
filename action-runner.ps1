@@ -38,6 +38,7 @@ function RunBranchAction {
         -H "Accept: application/vnd.github+json" `
         -H "X-GitHub-Api-Version: 2022-11-28" `
         -f ref="$branchName"
+		Start-Sleep -Seconds 5
 	}
 }
 
