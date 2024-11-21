@@ -77,7 +77,7 @@ Write-Host "1. All"
 for ($i = 0; $i -lt $configData.repos.Count; $i++) {
     Write-Host "$($i + 2). $($configData.repos[$i].ServiceName)"
 }
-$repoSelection = Read-Host "Enter the number corresponding to your repository selection"
+$repoSelection = [int](Read-Host "Enter the number corresponding to your repository selection")
 
 # Validate repository selection
 if ($repoSelection -lt 1 -or $repoSelection -gt ($configData.repos.Count + 1)) {
